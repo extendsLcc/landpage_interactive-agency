@@ -1,17 +1,24 @@
+include component/gradient-button.pug
+
 section.container
     .row
-        .col.col-sm-12.col-md-12
-            .display-4.font-weight-bold What we do?
-        - for( let i = 0; i < 4; i++ )
-            .col.col-sm-12.col-md-6
-                .card
-                    .card-header
-                        Header
-                    .card-body
-                        h5.card-title Title
-                        p.card-text Content
-                    .card-footer
-                        Footer
-        .col.col-md-12
-            .btn.btn-warning Ask for Price
-        
+        .col-12.text-center.my-5.py-2
+            .h1.font-weight-bold What we do?
+        -
+            var services = [ 
+                            { title: "Web Design", img: "Vector-Smart-Object-1.png"}, 
+                            { title: "Web Applications", img: "Vector-Smart-Object-2.png"}, 
+                            { title: "Digital Paiting", img: "Vector-Smart-Object.png" },
+                            { title: "Desktop Applications", img: "Vector-Smart-Object-3.png" }
+            ]
+        each item in services
+            .col-12.col-md-6
+                .card.border-0
+                    .card-horizontal
+                        .card-header.border-0.bg-transparent.d-flex.align-items-center
+                            img.m-auto(src="../assets/img/" + item.img, alt= "" +item.title )
+                        .card-body
+                            h5.card-title= item.title
+                            p.card-text Lorem ipsum dolor sit elit. Ipsa id omnis dolore porro quas, veritatis voluptatibus atque provident, explicabo cumque hic. Neque tempora dolor nobis nulla sed provident earum ut.
+        .col-12.text-center.my-5
+            +gradient-button( "Ask for Price" )
