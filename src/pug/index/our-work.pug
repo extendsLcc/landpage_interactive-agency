@@ -1,24 +1,27 @@
-section.container-fluid
-    .row
-        .col-md-12
-            .carousel.slide#my-carousel(data-ride='carousel')
-                ol.carousel-indicators
-                    li.active(data-target='#my-carousel', data-slide-to='0', aria-current='location')
-                    li(data-target='#my-carousel', data-slide-to='1')
-                .carousel-inner
-                    .carousel-item.active
-                        img.d-block.w-100(src='', alt='')
-                        .carousel-caption.d-none.d-md-block
-                            h5 Title
-                            p Text
-                    .carousel-item
-                        img.d-block.w-100(src='', alt='')
-                        .carousel-caption.d-none.d-md-block
-                            h5 Title
-                            p Text
-                a.carousel-control-prev(href='#my-carousel', data-slide='prev', role='button')
-                    span.carousel-control-prev-icon(aria-hidden='true')
-                    span.sr-only Previous
-                a.carousel-control-next(href='#my-carousel', data-slide='next', role='button')
-                    span.carousel-control-next-icon(aria-hidden='true')
-                    span.sr-only Next
+include component/gradient-button.pug
+
+mixin carouselAtributes( imgName, itemName )
+    .col-12.col-lg-4.px-0
+        img.img-fluid.h-100.w-100(src='../assets/img/'+ imgName, alt='slide 1')
+        .carousel-caption.d-none
+            h5.mb-3= itemName
+            p.mb-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse aperiam aliquid rem ipsum assumenda? 
+            +gradient-button( "Watch More" )
+// INIT OUR WORKS
+section.container-fluid.px-0
+    .carousel.slide#works-carousel(data-ride='carousel' data-interval='10000000')
+        .carousel-inner.row.w-100.mx-auto
+            .carousel-item.px-0.active
+                +carouselAtributes( "Layer-12.jpg", "Dronze Zone Layout" )
+            .carousel-item.px-0
+                +carouselAtributes( "Layer-14.jpg", "Neptune Template" )
+            .carousel-item.px-0
+                +carouselAtributes( "Layer-13.jpg", "FitApp Layout" )
+
+        a.carousel-control-prev(href='#works-carousel', data-slide='prev', role='button')
+            span.carousel-control-prev-icon(aria-hidden='true')
+            span.sr-only Anterior
+        a.carousel-control-next(href='#works-carousel', data-slide='next', role='button')
+            span.carousel-control-next-icon(aria-hidden='true')
+            span.sr-only Próximo
+// /END OUR WORKS

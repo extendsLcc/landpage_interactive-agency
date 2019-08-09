@@ -4,6 +4,12 @@ bg-img( src )
     background-size: cover;
     background-repeat: no-repeat;
 
+pseudo-background( backgroundColor )
+    content: '';
+    width: 100%;
+    display: block;
+    position: absolute;
+    background: backgroundColor;
 
 html, body
     height: 100%;
@@ -67,14 +73,10 @@ a.nav-link
     .row
         .col-12[id$="img"]
             &:before
-                content: '';
-                width: 100%;
+                pseudo-background: linear-gradient( to bottom, #000, #fff0 );
                 height: 30%;
-                display: block;
-                position: absolute;
                 top: 0;
                 z-index: 10;
-                background: linear-gradient( to bottom, #000, #fff0 );
 
 
 // Services
@@ -86,6 +88,33 @@ a.nav-link
 
 .card-horizontal
     display: block;
+
+
+// Our Work
+#works-carousel
+    .carousel-item
+        &:before
+            height: 100%;
+            transition: background 1s;
+            pseudo-background: rgba( 0, 0, 0, 0.0 );
+    .carousel-item.active
+        .col-lg-4:nth-child(2)
+            .carousel-caption
+                display: block !important;
+                bottom: 30px;
+            &:before
+                height: 100%;
+                pseudo-background: rgba( 0, 0, 0, 0.4 );
+@media( max-width: 992px )
+    #works-carousel
+        .carousel-item.active
+            .col-lg-4:nth-child(1)
+                .carousel-caption
+                    display: block !important;
+                    bottom: 30px;
+                &:before
+                    height: 100%;
+                    pseudo-background: rgba( 0, 0, 0, 0.4 );
 
 
 // About Us

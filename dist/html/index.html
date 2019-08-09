@@ -135,7 +135,41 @@
         </div>
       </div>
     </section>
-    <!--include our-work.pug-->
+    <!-- INIT OUR WORKS-->
+    <section class="container-fluid px-0">
+      <div class="carousel slide" id="works-carousel" data-ride="carousel" data-interval="10000000">
+        <div class="carousel-inner row w-100 mx-auto">
+          <div class="carousel-item px-0 active">
+                <div class="col-12 col-lg-4 px-0"><img class="img-fluid h-100 w-100" src="../assets/img/Layer-12.jpg" alt="slide 1">
+                  <div class="carousel-caption d-none">
+                    <h5 class="mb-3">Dronze Zone Layout</h5>
+                    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse aperiam aliquid rem ipsum assumenda? </p>
+                        <button class="btn btn-gradient py-2 px-5">Watch More</button>
+                  </div>
+                </div>
+          </div>
+          <div class="carousel-item px-0">
+                <div class="col-12 col-lg-4 px-0"><img class="img-fluid h-100 w-100" src="../assets/img/Layer-14.jpg" alt="slide 1">
+                  <div class="carousel-caption d-none">
+                    <h5 class="mb-3">Neptune Template</h5>
+                    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse aperiam aliquid rem ipsum assumenda? </p>
+                        <button class="btn btn-gradient py-2 px-5">Watch More</button>
+                  </div>
+                </div>
+          </div>
+          <div class="carousel-item px-0">
+                <div class="col-12 col-lg-4 px-0"><img class="img-fluid h-100 w-100" src="../assets/img/Layer-13.jpg" alt="slide 1">
+                  <div class="carousel-caption d-none">
+                    <h5 class="mb-3">FitApp Layout</h5>
+                    <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse aperiam aliquid rem ipsum assumenda? </p>
+                        <button class="btn btn-gradient py-2 px-5">Watch More</button>
+                  </div>
+                </div>
+          </div>
+        </div><a class="carousel-control-prev" href="#works-carousel" data-slide="prev" role="button"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Anterior</span></a><a class="carousel-control-next" href="#works-carousel" data-slide="next" role="button"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Próximo</span></a>
+      </div>
+    </section>
+    <!-- /END OUR WORKS-->
     <section class="thumbnail py-5" id="about-us">
       <div class="container text-white text-center">
         <div class="row">
@@ -187,26 +221,81 @@
         </div>
       </div>
     </section>
+    <!-- INIT FOOTER-->
     <footer>
       <div class="container-fluid px-0" id="maps-frame">
         <iframe width="100%" height="450px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58425.66330779149!2d-53.34016925231242!3d-23.761498403345044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f2d6aad88f12b7%3A0x62e741a44bc7bfc7!2sUmuarama%2C+PR!5e0!3m2!1spt-BR!2sbr!4v1565307142908!5m2!1spt-BR!2sbr"></iframe>
       </div>
       <div class="container-fluid">
-        <div class="jumbotron bg-light text-center text-muted">
+        <div class="jumbotron bg-light mb-0 text-center text-muted">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus enim voluptate laudantium vero maxime incidunt provident.</p>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <div class="h5">@Lucas LCC</div>
         </div>
       </div>
     </footer>
+    <!-- / END FOOTER-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
     <script src="../assets/js/script.js"></script>
-    <!--script. 
-    var image = document.getElementsByClassName('thumbnail');
-    new simpleParallax(image);
-    -->
+    <script>
+      var image = document.getElementsByClassName('thumbnail');
+      new simpleParallax(image);
+    </script>
+    <style>
+      /* 
+      *   Multiple Item carousel 
+      *   ! Ref: https://www.codeply.com/go/zjZsn1ly29 
+      */
+      @media (max-width: 768px) {
+      
+          .carousel-inner .carousel-item > div {
+      
+              display: none;
+      
+          }
+          .carousel-inner .carousel-item > div:first-child {
+      
+              display: block;
+      
+          }
+      
+      }
+      
+      .carousel-inner .carousel-item.active,
+      .carousel-inner .carousel-item-next,
+      .carousel-inner .carousel-item-prev {
+      
+          display: flex;
+      
+      }
+      
+      /* display 3 */
+      @media (min-width: 768px) {
+          
+          .carousel-inner .carousel-item-right.active,
+          .carousel-inner .carousel-item-next {
+      
+              transform: translateX(33.333%);
+      
+          }
+          
+          .carousel-inner .carousel-item-left.active, 
+          .carousel-inner .carousel-item-prev {
+      
+              transform: translateX(-33.333%);
+      
+          }
+      }
+      
+      .carousel-inner .carousel-item-right,
+      .carousel-inner .carousel-item-left{ 
+      
+          transform: translateX(0);
+      
+      }
+    </style>
   </body>
 </html>

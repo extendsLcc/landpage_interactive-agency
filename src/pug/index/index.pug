@@ -17,7 +17,7 @@ html(lang='pt-Br')
         include header.pug
         include products.pug
         include services.pug
-        //include our-work.pug
+        include our-work.pug
         include abount-us.pug
         include footer.pug
 
@@ -26,6 +26,60 @@ html(lang='pt-Br')
         script( src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" )
         script( src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js" )
         script( src="../assets/js/script.js" )
-        //script. 
+        script.
             var image = document.getElementsByClassName('thumbnail');
             new simpleParallax(image);
+        style.
+            
+            /* 
+            *   Multiple Item carousel 
+            *   ! Ref: https://www.codeply.com/go/zjZsn1ly29 
+            */
+            @media (max-width: 768px) {
+
+                .carousel-inner .carousel-item > div {
+
+                    display: none;
+
+                }
+                .carousel-inner .carousel-item > div:first-child {
+
+                    display: block;
+
+                }
+
+            }
+
+            .carousel-inner .carousel-item.active,
+            .carousel-inner .carousel-item-next,
+            .carousel-inner .carousel-item-prev {
+
+                display: flex;
+
+            }
+
+            /* display 3 */
+            @media (min-width: 768px) {
+                
+                .carousel-inner .carousel-item-right.active,
+                .carousel-inner .carousel-item-next {
+
+                    transform: translateX(33.333%);
+
+                }
+                
+                .carousel-inner .carousel-item-left.active, 
+                .carousel-inner .carousel-item-prev {
+
+                    transform: translateX(-33.333%);
+
+                }
+            }
+
+            .carousel-inner .carousel-item-right,
+            .carousel-inner .carousel-item-left{ 
+
+                transform: translateX(0);
+
+            }
+
