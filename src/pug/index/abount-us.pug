@@ -1,19 +1,27 @@
-section#abount-us
-    .container
+include component/gradient-button.pug
+
+section#about-us.thumbnail.py-5
+    .container.text-white.text-center
         .row
-            .col.col-md-12
-                .jumbotron
-                    h1.display-4 Title
-                    p.lead Subtitle
-                    p Content
+            .col-12.col-md-12
+                .jumbotron.bg-transparent.text-center
+                    h1.display-5.font-weight-bold About Us!
+                    p.lead.opacity-7 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit atque hic culpa exercitationem rem dicta laboriosam totam nihil accusamus delectus dolorum, animi praesentium neque, fugiat error consequatur ad itaque excepturi!
         .row
-            - for( let i=0; i<4;i++ )
-                .col.col-md-6.col-sm-12.col-lg-3
-                    .card
-                        img.card-img-top(src='', alt='')
+            -
+                var persons = [
+                    "Layer-16.jpg",
+                    "Layer-17.jpg",
+                    "Layer-18.jpg",
+                    "Layer-4-copy-3.png",
+                ]
+            each personImg in persons
+                .col-12.col-sm-12.col-md-6.col-lg-3
+                    .card.bg-transparent.border-0
+                        img.card-img-top.w-50.m-auto.rounded-circle(src='../assets/img/' + personImg , alt='Retrato do Funcionário')
                         .card-body
-                            h5.card-title Title
-                            p.card-text Content
+                            h5.card-title John Doe
+                            p.card-text.opacity-7 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         .row
-            .col.col-md-12
-                .btn.btn-warning Watch More
+            .col-12.col-md-12
+                +gradient-button( "Watch More" )(class='my-5')

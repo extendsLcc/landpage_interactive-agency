@@ -1,21 +1,27 @@
 bg-img( src )
     background-image: url( src );
     background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
 
 html, body
     height: 100%;
+
+
+// Imagens
 
 #header-img
     bg-img: '../img/Layer-10.jpg';
 
 #design-img
     bg-img: '../img/bg-design.jpg';
-    background-size: 100% 100%, contain, 3em;
     
 #code-img
     bg-img: '../img/bg-code.png';
-    background-size: 100% 100%, contain, 3em;
+
+#about-us
+    bg-img: '../img/Layer-15.jpg';
 
         
 // NavBar
@@ -81,6 +87,14 @@ a.nav-link
 .card-horizontal
     display: block;
 
+
+// About Us
+
+@media ( max-width: 767.98px )
+    #about-us
+        .card-img-top
+            width: 30% !important;
+        
 
 // General 
 
