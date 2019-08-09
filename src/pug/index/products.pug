@@ -1,20 +1,24 @@
-section.container-fluid
-    .row
-        .col.col-sm-12.col-md-6
-            .card
-                .card-header
-                    Header
-                .card-body
-                    h5.card-title Title
-                    p.card-text Content
-                .card-footer
-                    Footer
-        .col.col-sm-12.col-md-6
-            .card
-                .card-header
-                    Header
-                .card-body
-                    h5.card-title Title
-                    p.card-text Content
-                .card-footer
-                    Footer
+include component/gradient-button.pug
+
+mixin product( title )
+    .my-5.p-4.text-white
+        .display-4
+            span.font-weight-light Best
+            span.font-weight-bold=title
+        .lead.my-2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit accusamus? Rerum modi odit hic asperiores voluptate, non illo quo eius quod, recusandae minus id sunt aperiam?
+        +gradient-button( "Ask for Price" )(class="mt-3")
+
+section.container-fluid.px-0#code-design
+    .row.no-gutters
+        //+product( "design-img", "Design" )
+        //+product( "code-img", "Code" )
+        .col-12.col-sm-12.col-md-6.py-5#design-img
+            .row.inner-row
+                .col-md-3.col
+                .col-md-9.col-12
+                    +product( "Design" )
+        .col-12.col-sm-12.col-md-6.py-5#code-img
+            .row.inner-row
+                .col-md-9.col-12
+                    +product( "Code" )
+                .col-md-3.col
