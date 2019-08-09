@@ -1,0 +1,20 @@
+nav.navbar.navbar-expand-lg.navbar-light.py-5#navbar-main
+    //- .fixed-top
+    .container
+        a.navbar-brand( href="#")
+            .h2
+                span.font-weight-bold.sans-serif Interactive
+                span.font-weight-light Agency
+        button.navbar-toggler(data-target='#main-nav', data-toggle='collapse', aria-controls='main-nav', aria-expanded='false', aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+        .collapse.navbar-collapse.text-dark#main-nav
+            ul.navbar-nav.ml-auto
+                li.nav-item.active.active-page
+                    a.nav-link(href='#')
+                        Item.font-weight-bold Home
+                        span.sr-only (Atual)
+                - var itens = [ "About us", "Offer", "Portfolio", "Contact" ];
+                each item in itens
+                    li.nav-item
+                        a.nav-link.text-dark(href='#' )
+                            Item=item

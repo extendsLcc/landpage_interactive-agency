@@ -1,0 +1,18 @@
+include component/gradient-button.pug
+
+header.vh-100.overflow-hidden#header-img
+    // INIT NAVBAR
+    include navbar.pug
+    // /END NAVBAR
+    // INIT HEADER CONTENT
+    .container
+        .row.d-flex.justify-content-center
+            .col.mx-auto.text-center.mt-5.pt-5
+                .h1.text-weight-bold Lorem ipsum dolor sit amet
+                p.lead.text-muted.opacity-7 Necessitatibus saepe quam cupiditate porro vel.
+                +gradient-button( "Ask for Price" )(class='mt-5')
+                .scrool-hint
+                    #mouse-icon.mb-5
+                    p.small.text-white scrool down
+    // /END HEADER CONTENT
+                
