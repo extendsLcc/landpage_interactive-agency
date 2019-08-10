@@ -2,7 +2,7 @@ include component/gradient-button.pug
 
 mixin carouselAtributes( itemName, index )
     .col-12.col-lg-4.px-0( id="slide-layer-" + index )
-        .carousel-custom-caption.text-white.text-center.my-5.p-5.d-none.position-relative( alt="Slide "+ index )
+        .carousel-custom-caption.opacity-0.text-white.text-center.my-5.p-5.position-relative( alt="Slide "+ index )
             h5.mb-3= itemName
             p.mb-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse aperiam aliquid rem ipsum assumenda? 
             +gradient-button( "Watch More" )

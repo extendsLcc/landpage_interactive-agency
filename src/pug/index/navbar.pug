@@ -10,11 +10,17 @@ nav.navbar.navbar-expand-lg.navbar-light.py-5#navbar-main
         .collapse.navbar-collapse.text-dark#main-nav
             ul.navbar-nav.ml-auto
                 li.nav-item.active.active-page
-                    a.nav-link(href='#')
+                    a.nav-link.scroll(href='#')
                         Item.font-weight-bold Home
                         span.sr-only (Atual)
-                - var itens = [ "About us", "Offer", "Portfolio", "Contact" ];
+                -
+                    var itens = [ 
+                            { name: "About us", id: "about-us"},
+                            { name: "Offer", id: "code-design" },
+                            { name: "Portfolio", id: "works-carousel" },
+                            { name: "Contact", id: "footer-info"}
+                        ];
                 each item in itens
                     li.nav-item
-                        a.nav-link.text-dark(href='#' )
-                            Item=item
+                        a.nav-link.text-dark.scroll(href='#'+ item.id )
+                            Item=item.name

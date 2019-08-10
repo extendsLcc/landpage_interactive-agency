@@ -16,9 +16,6 @@ parallax( backgroundImg )
     bg-img: backgroundImg;
     background-attachment: fixed;
 
-html, body
-    height: 100%;
-
 
 // Imagens
 
@@ -115,25 +112,27 @@ a.nav-link
         &:before
             height: 100%;
             transition: background 1s;
-            z-index: -1;
+            z-index: 0;
             pseudo-background: rgba( 0, 0, 0, 0.0 );
-    .carousel-item.active
-        .col-lg-4:nth-child(2)
-            .carousel-custom-caption
-                display: block !important;
-            &:before
-                height: 100%;
-                pseudo-background: rgba( 0, 0, 0, 0.4 );
-@media( max-width: 992px )
+@media( min-width: 992px )
+    #works-carousel
+        .carousel-item.active
+            .col-lg-4:nth-child(2)
+                .carousel-custom-caption
+                        opacity: 1.0;
+                &:before
+                    height: 100%;
+                    pseudo-background: rgba( 0, 0, 0, 0.4 );
+@media( max-width: 991.98px )
     #works-carousel
         .carousel-item.active
             .col-lg-4:nth-child(1)
                 .carousel-custom-caption
-                    display: block !important;
-                    bottom: 30px;
+                    opacity: 1.0;
                 &:before
                     height: 100%;
-                    z-index: -1;
+                    transition: background 1s;
+                    z-index: 0;
                     pseudo-background: rgba( 0, 0, 0, 0.4 );
 
 
@@ -146,6 +145,10 @@ a.nav-link
         
 
 // General 
+
+html, body
+    height: 100%;
+    scroll-behavior: smooth;
 
 .sans-serif
     font-family: sans-serif;
@@ -163,12 +166,9 @@ a.nav-link
     margin-left: 0 !important;
     margin-right: 0 !important;
 
-/*
-.fixed-top
-    position: sticky;
-    top: 0;
-    background: #000;
-    color: #fff !important;*/
+.opacity-0
+    opacity: 0.0;
+    transition: opacity 0.5s;
 
 .opacity-5
     opacity: 0.5;

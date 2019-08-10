@@ -11,6 +11,7 @@ html(lang='pt-Br')
         link( rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
         link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', rel='stylesheet')
         link(rel="stylesheet", href="../assets/css/main-style.css")
+        link(rel="stylesheet", href="../assets/css/carousel-style.css")
         //- link(href='/css/style.css', rel='stylesheet')
     body
 
@@ -25,65 +26,4 @@ html(lang='pt-Br')
         script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
         script( src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" )
         script( src="../assets/js/script.js" )
-        style.
-            
-            /* 
-            *   Multiple Item carousel 
-            *   Adaptado de
-            *   ! Ref: https://www.codeply.com/go/zjZsn1ly29 
-            */
-
-
-            .carousel-inner .carousel-item.active,
-            .carousel-inner .carousel-item-next,
-            .carousel-inner .carousel-item-prev {
-
-                display: flex;
-
-            }
-
-            /* medium - display 1  */
-            @media (max-width: 768px) {
-
-                .carousel-inner .carousel-item-right.active,
-                .carousel-inner .carousel-item-next {
-
-                    transform: translateX(100%);
-
-                }
-                
-                .carousel-inner .carousel-item-left.active, 
-                .carousel-inner .carousel-item-prev {
-
-                    transform: translateX(-100%);
-
-                }
-                
-            }
-
-            /* large - display 3 */
-            @media (min-width: 992px) {
-                
-                .carousel-inner .carousel-item-right.active,
-                .carousel-inner .carousel-item-next {
-
-                    transform: translateX(33%);
-
-                }
-                
-                .carousel-inner .carousel-item-left.active, 
-                .carousel-inner .carousel-item-prev {
-
-                    transform: translateX(-33%);
-
-                }
-            }
-
-            .carousel-inner .carousel-item-right,
-            .carousel-inner .carousel-item-left{ 
-
-                transform: translateX(0);
-
-            }
-
 
