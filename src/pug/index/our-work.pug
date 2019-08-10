@@ -1,23 +1,22 @@
 include component/gradient-button.pug
 
-mixin carouselAtributes( imgName, itemName )
-    .col-12.col-lg-4.px-0
-        img.img-fluid.h-100.w-100(src='../assets/img/'+ imgName, alt='slide 1')
-        .carousel-caption.d-none
+mixin carouselAtributes( itemName, index )
+    .col-12.col-lg-4.px-0( id="slide-layer-" + index )
+        .carousel-custom-caption.text-white.text-center.my-5.p-5.d-none.position-relative( alt="Slide "+ index )
             h5.mb-3= itemName
             p.mb-5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse aperiam aliquid rem ipsum assumenda? 
             +gradient-button( "Watch More" )
+            
 // INIT OUR WORKS
 section.container-fluid.px-0
-    .carousel.slide#works-carousel(data-ride='carousel' data-interval='10000000')
-        .carousel-inner.row.w-100.mx-auto
+    .carousel.slide#works-carousel(data-ride='carousel' data-interval='1000000')
+        .carousel-inner.row.inner-row
             .carousel-item.px-0.active
-                +carouselAtributes( "Layer-12.jpg", "Dronze Zone Layout" )
+                +carouselAtributes( "Dronze Zone Layout", "1" )
             .carousel-item.px-0
-                +carouselAtributes( "Layer-14.jpg", "Neptune Template" )
+                +carouselAtributes( "Neptune Template", "2" )
             .carousel-item.px-0
-                +carouselAtributes( "Layer-13.jpg", "FitApp Layout" )
-
+                +carouselAtributes( "FitApp Layout", "3" )
         a.carousel-control-prev(href='#works-carousel', data-slide='prev', role='button')
             span.carousel-control-prev-icon(aria-hidden='true')
             span.sr-only Anterior

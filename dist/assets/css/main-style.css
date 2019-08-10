@@ -4,27 +4,49 @@ body {
 }
 #header-img {
   background-image: url("../img/Layer-10.jpg");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 #design-img {
   background-image: url("../img/bg-design.jpg");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 #code-img {
   background-image: url("../img/bg-code.png");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 #about-us {
   background-image: url("../img/Layer-15.jpg");
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
+}
+#slide-layer-1 {
+  background-image: url("../img/Layer-12.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#slide-layer-2 {
+  background-image: url("../img/Layer-14.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#slide-layer-3 {
+  background-image: url("../img/Layer-13.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 #main-nav .nav-item Item {
   font-weight: 600;
@@ -43,6 +65,12 @@ a.nav-link:hover item {
   padding: 8px 4px;
   border-radius: 45px;
   box-shadow: 0px 10px 0px 15px #fff, 0px 20px 0px 15px #fff;
+}
+@media (max-width: 575.98px) {
+  #content-title .lead {
+    color: #fff !important;
+    opacity: 1;
+  }
 }
 @media (min-width: 768px) {
   .scrool-hint {
@@ -74,15 +102,15 @@ a.nav-link:hover item {
 #works-carousel .carousel-item:before {
   height: 100%;
   transition: background 1s;
+  z-index: -1;
   content: '';
   width: 100%;
   display: block;
   position: absolute;
   background: rgba(0,0,0,0);
 }
-#works-carousel .carousel-item.active .col-lg-4:nth-child(2) .carousel-caption {
+#works-carousel .carousel-item.active .col-lg-4:nth-child(2) .carousel-custom-caption {
   display: block !important;
-  bottom: 30px;
 }
 #works-carousel .carousel-item.active .col-lg-4:nth-child(2):before {
   height: 100%;
@@ -93,12 +121,13 @@ a.nav-link:hover item {
   background: rgba(0,0,0,0.4);
 }
 @media (max-width: 992px) {
-  #works-carousel .carousel-item.active .col-lg-4:nth-child(1) .carousel-caption {
+  #works-carousel .carousel-item.active .col-lg-4:nth-child(1) .carousel-custom-caption {
     display: block !important;
     bottom: 30px;
   }
   #works-carousel .carousel-item.active .col-lg-4:nth-child(1):before {
     height: 100%;
+    z-index: -1;
     content: '';
     width: 100%;
     display: block;

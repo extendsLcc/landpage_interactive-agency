@@ -17,7 +17,7 @@
       <nav class="navbar navbar-expand-lg navbar-light py-5" id="navbar-main">
         <div class="container"><a class="navbar-brand" href="#">
             <div class="h2"><span class="font-weight-bold sans-serif">Interactive</span><span class="font-weight-light">Agency</span></div></a>
-          <button class="navbar-toggler" data-target="#main-nav" data-toggle="collapse" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <button class="navbar-toggler mb-2" data-target="#main-nav" data-toggle="collapse" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
           <div class="collapse navbar-collapse text-dark" id="main-nav">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active active-page"><a class="nav-link" href="#">
@@ -38,7 +38,7 @@
       <!-- INIT HEADER CONTENT-->
       <div class="container">
         <div class="row d-flex justify-content-center">
-          <div class="col mx-auto text-center mt-5 pt-5">
+          <div class="col mx-auto text-center mt-5 pt-5" id="content-title">
             <div class="h1 text-weight-bold">Lorem ipsum dolor sit amet</div>
             <p class="lead text-muted opacity-7">Necessitatibus saepe quam cupiditate porro vel.</p>
                 <button class="btn btn-gradient py-2 px-5 mt-5">Ask for Price</button>
@@ -137,11 +137,11 @@
     </section>
     <!-- INIT OUR WORKS-->
     <section class="container-fluid px-0">
-      <div class="carousel slide" id="works-carousel" data-ride="carousel" data-interval="10000000">
-        <div class="carousel-inner row w-100 mx-auto">
+      <div class="carousel slide" id="works-carousel" data-ride="carousel" data-interval="1000000">
+        <div class="carousel-inner row inner-row">
           <div class="carousel-item px-0 active">
-                <div class="col-12 col-lg-4 px-0"><img class="img-fluid h-100 w-100" src="../assets/img/Layer-12.jpg" alt="slide 1">
-                  <div class="carousel-caption d-none">
+                <div class="col-12 col-lg-4 px-0" id="slide-layer-1">
+                  <div class="carousel-custom-caption text-white text-center my-5 p-5 d-none position-relative" alt="Slide 1">
                     <h5 class="mb-3">Dronze Zone Layout</h5>
                     <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse aperiam aliquid rem ipsum assumenda? </p>
                         <button class="btn btn-gradient py-2 px-5">Watch More</button>
@@ -149,8 +149,8 @@
                 </div>
           </div>
           <div class="carousel-item px-0">
-                <div class="col-12 col-lg-4 px-0"><img class="img-fluid h-100 w-100" src="../assets/img/Layer-14.jpg" alt="slide 1">
-                  <div class="carousel-caption d-none">
+                <div class="col-12 col-lg-4 px-0" id="slide-layer-2">
+                  <div class="carousel-custom-caption text-white text-center my-5 p-5 d-none position-relative" alt="Slide 2">
                     <h5 class="mb-3">Neptune Template</h5>
                     <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse aperiam aliquid rem ipsum assumenda? </p>
                         <button class="btn btn-gradient py-2 px-5">Watch More</button>
@@ -158,8 +158,8 @@
                 </div>
           </div>
           <div class="carousel-item px-0">
-                <div class="col-12 col-lg-4 px-0"><img class="img-fluid h-100 w-100" src="../assets/img/Layer-13.jpg" alt="slide 1">
-                  <div class="carousel-caption d-none">
+                <div class="col-12 col-lg-4 px-0" id="slide-layer-3">
+                  <div class="carousel-custom-caption text-white text-center my-5 p-5 d-none position-relative" alt="Slide 3">
                     <h5 class="mb-3">FitApp Layout</h5>
                     <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse aperiam aliquid rem ipsum assumenda? </p>
                         <button class="btn btn-gradient py-2 px-5">Watch More</button>
@@ -170,7 +170,8 @@
       </div>
     </section>
     <!-- /END OUR WORKS-->
-    <section class="thumbnail py-5" id="about-us">
+    <!-- INIT ABOUT US-->
+    <section class="py-5" id="about-us">
       <div class="container text-white text-center">
         <div class="row">
           <div class="col-12 col-md-12">
@@ -221,6 +222,7 @@
         </div>
       </div>
     </section>
+    <!-- /END ABOUT US-->
     <!-- INIT FOOTER-->
     <footer>
       <div class="container-fluid px-0" id="maps-frame">
@@ -238,31 +240,14 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
     <script src="../assets/js/script.js"></script>
-    <script>
-      var image = document.getElementsByClassName('thumbnail');
-      new simpleParallax(image);
-    </script>
     <style>
       /* 
       *   Multiple Item carousel 
+      *   Adaptado de
       *   ! Ref: https://www.codeply.com/go/zjZsn1ly29 
       */
-      @media (max-width: 768px) {
       
-          .carousel-inner .carousel-item > div {
-      
-              display: none;
-      
-          }
-          .carousel-inner .carousel-item > div:first-child {
-      
-              display: block;
-      
-          }
-      
-      }
       
       .carousel-inner .carousel-item.active,
       .carousel-inner .carousel-item-next,
@@ -272,20 +257,39 @@
       
       }
       
-      /* display 3 */
-      @media (min-width: 768px) {
-          
+      /* medium - display 1  */
+      @media (max-width: 768px) {
+      
           .carousel-inner .carousel-item-right.active,
           .carousel-inner .carousel-item-next {
       
-              transform: translateX(33.333%);
+              transform: translateX(100%);
       
           }
           
           .carousel-inner .carousel-item-left.active, 
           .carousel-inner .carousel-item-prev {
       
-              transform: translateX(-33.333%);
+              transform: translateX(-100%);
+      
+          }
+          
+      }
+      
+      /* large - display 3 */
+      @media (min-width: 992px) {
+          
+          .carousel-inner .carousel-item-right.active,
+          .carousel-inner .carousel-item-next {
+      
+              transform: translateX(33%);
+      
+          }
+          
+          .carousel-inner .carousel-item-left.active, 
+          .carousel-inner .carousel-item-prev {
+      
+              transform: translateX(-33%);
       
           }
       }

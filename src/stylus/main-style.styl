@@ -1,8 +1,3 @@
-bg-img( src )
-    background-image: url( src );
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 
 pseudo-background( backgroundColor )
     content: '';
@@ -11,6 +6,16 @@ pseudo-background( backgroundColor )
     position: absolute;
     background: backgroundColor;
 
+bg-img( backgroundImg )
+    background-image: url( backgroundImg );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+parallax( backgroundImg )
+    bg-img: backgroundImg;
+    background-attachment: fixed;
+
 html, body
     height: 100%;
 
@@ -18,17 +23,25 @@ html, body
 // Imagens
 
 #header-img
-    bg-img: '../img/Layer-10.jpg';
+    parallax: '../img/Layer-10.jpg';
 
 #design-img
-    bg-img: '../img/bg-design.jpg';
+    parallax: '../img/bg-design.jpg';
     
 #code-img
-    bg-img: '../img/bg-code.png';
+    parallax: '../img/bg-code.png';
 
 #about-us
-    bg-img: '../img/Layer-15.jpg';
+    parallax: '../img/Layer-15.jpg';
 
+#slide-layer-1
+    bg-img: "../img/Layer-12.jpg";
+
+#slide-layer-2
+    bg-img: "../img/Layer-14.jpg";
+
+#slide-layer-3
+    bg-img: "../img/Layer-13.jpg";
         
 // NavBar
 
@@ -58,6 +71,12 @@ a.nav-link
     padding: 8px 4px;
     border-radius: 45px;
     box-shadow: 0px 10px 0px 15px #fff, 0px 20px 0px 15px #FFF;
+
+@media ( max-width: 575.98px )
+    #content-title
+        .lead
+            color: #fff !important;
+            opacity: 1.0; 
 
 @media ( min-width: 768px )
     .scrool-hint
@@ -96,12 +115,12 @@ a.nav-link
         &:before
             height: 100%;
             transition: background 1s;
+            z-index: -1;
             pseudo-background: rgba( 0, 0, 0, 0.0 );
     .carousel-item.active
         .col-lg-4:nth-child(2)
-            .carousel-caption
+            .carousel-custom-caption
                 display: block !important;
-                bottom: 30px;
             &:before
                 height: 100%;
                 pseudo-background: rgba( 0, 0, 0, 0.4 );
@@ -109,11 +128,12 @@ a.nav-link
     #works-carousel
         .carousel-item.active
             .col-lg-4:nth-child(1)
-                .carousel-caption
+                .carousel-custom-caption
                     display: block !important;
                     bottom: 30px;
                 &:before
                     height: 100%;
+                    z-index: -1;
                     pseudo-background: rgba( 0, 0, 0, 0.4 );
 
 

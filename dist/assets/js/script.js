@@ -1,10 +1,10 @@
 (() => {
 
     // ! Ref: https://www.codeply.com/go/zjZsn1ly29
-
+/*
     $('#works-carousel').carousel({
-        interval: 10000000
-    })
+        interval: 1000000
+    })*/
 
     $('.carousel .carousel-item').each(function () {
 
