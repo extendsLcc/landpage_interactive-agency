@@ -12,5 +12,11 @@
     "html"
   ],
   "author": "Lucas LCC",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "pug": "^2.0.4",
+    "stylus": "^0.54.5"
+  }
 }
