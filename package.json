@@ -15,8 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "bootstrap": "^4.3.1",
-    "jquery": "^3.5.0",
-    "pug": "^2.0.4",
+    "jquery": "^3.4.1",
+    "pug": "^3.0.1",
     "stylus": "^0.54.5"
   }
 }
